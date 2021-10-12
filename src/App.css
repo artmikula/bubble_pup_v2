@@ -1,6 +1,11 @@
 :root {
   --color: red;
   background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
 }
 
 .App {
@@ -46,7 +51,8 @@
     transform: rotate(360deg);
   }
 }
-#bubble {
+
+.bubble {
   width: 100px;
   height: 100px;
   /* border-radius: 50%; */
@@ -57,11 +63,16 @@
   /* height: 5em; */
   /* width: 5em; */
   margin: 5px;
-  cursor: url(bigaxe2.png), pointer;
+  /* cursor: url(bigaxe2.png), pointer; */
 }
 
 #bubbleDiv {
   display: flex;
   flex-wrap: wrap;
   max-width: 400px;
+}
+
+#gameBox {
+  min-width: 110px;
+  min-height: 110px;
 }

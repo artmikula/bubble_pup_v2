@@ -7,6 +7,8 @@ import popSound from "../src/popsound.wav";
 function App() {
   const [count, setCount] = useState(0);
   const [style, setStyle] = useState(0);
+  // const [toPop, setToPop] = useState(10);
+  const toPop = 10;
 
   return (
     <div className="App">
@@ -37,14 +39,16 @@ function Game() {
   const bubbles = [];
   const [play] = useSound(popSound);
   const testing = function (e) {
-    // let i = 0;
     e.target.style.display = "none";
-    // i += i;
-    console.log("test");
+    play();
   };
 
   for (let i = 0; i < 12; i++) {
-    bubbles.push(<div id="bubble" onClick={play} onClick={testing}></div>);
+    bubbles.push(
+      <div id="gameBox">
+        <div className="bubble" onClick={testing}></div>
+      </div>,
+    );
   }
   return <div id="bubbleDiv">{bubbles}</div>;
 }
