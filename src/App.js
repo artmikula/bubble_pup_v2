@@ -3,12 +3,12 @@ import "./App.css";
 import React, { useState } from "react";
 import useSound from "use-sound";
 import popSound from "../src/popsound.wav";
+import Timer from "./Timer";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [style, setStyle] = useState(0);
+  const [count, setCount] = useState(9);
   // const [toPop, setToPop] = useState(10);
-  const toPop = 10;
 
   return (
     <div className="App">
@@ -38,19 +38,32 @@ function App() {
 function Game() {
   const bubbles = [];
   const [play] = useSound(popSound);
+  const initialCount = 9;
+  // const [number, setNumber] = 9;
+  const [bubblesNumber, setBubblesNumber] = useState(initialCount);
   const testing = function (e) {
     e.target.style.display = "none";
     play();
+    // setNumber -- 1;
+    // if (number === 0) {
+    //   setBubblesNumber((bubblesNumber += bubblesNumber));
+    //   Game();
+    // }
   };
 
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < bubblesNumber; i++) {
     bubbles.push(
       <div id="gameBox">
         <div className="bubble" onClick={testing}></div>
       </div>,
     );
   }
-  return <div id="bubbleDiv">{bubbles}</div>;
+  return (
+    <div id="bubbleDiv">
+      <Timer startCount="10" />
+      {bubbles}
+    </div>
+  );
 }
 
 function Adding(count, setCount) {
