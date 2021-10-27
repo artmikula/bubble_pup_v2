@@ -55,28 +55,82 @@
 .bubble {
   width: 100px;
   height: 100px;
-  /* border-radius: 50%; */
   /* background-image: url(./pumpkin.png); */
   background-color: darkorange;
-  /* border: 2px solid pink; */
   clip-path: circle(50%);
-  /* height: 5em; */
-  /* width: 5em; */
-  margin: 5px;
+  margin: 5px, auto;
   /* cursor: url(bigaxe2.png), pointer; */
+}
+
+#bubbleDiv {
+  max-width: 400px;
+  width: 360px;
+  height: 360px;
+}
+
+.gameBox {
+  width: 120px;
+  height: 120px;
+}
+h1 {
+  color: orange;
+  margin: 10px;
+}
+h3 {
+  color: purple;
+}
+h2 {
+  color: red;
+}
+
+#wrap,
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  outline: 2px solid purple;
 }
 
 #bubbleDiv {
   display: flex;
   flex-wrap: wrap;
-  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#gameBox {
-  min-width: 110px;
-  min-height: 110px;
+button {
+  outline: 5px solid purple;
+  background-color: black;
 }
-h3,
-h1 {
-  color: orange;
+#scoreBoard {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  color: pink;
+  min-width: 200px;
+  outline: 2px solid purple;
+  text-align: center;
+}
+#gameOver {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#nickInput {
+  text-align: center;
+}
+#nickInput:outline {
+  outline: 2px purple solid;
+}
+#nickInput::placeholder {
+  color: black;
+  background-color: orange;
+  border: 2px purple;
+}
+button {
+  margin: 15px;
 }
