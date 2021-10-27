@@ -1,6 +1,6 @@
-function Welcome({ level, setLevel, gameOver }) {
+function Welcome({ setGameStarted }) {
   let startGame = function (e) {
-    setLevel(1);
+    setGameStarted(true);
   };
 
   return (

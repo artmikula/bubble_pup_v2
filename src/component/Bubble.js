@@ -1,7 +1,7 @@
-const Bubble = ({ handlePop }) => {
+const Bubble = ({ handlePop, style }) => {
   return (
-    <div className="gameBox">
-      <div className="bubble" onClick={handlePop}></div>
+    <div className={style}>
+      <div onClick={handlePop}></div>
     </div>
   );
 };

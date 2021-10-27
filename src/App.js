@@ -6,22 +6,22 @@ import GameOver from "./component/GameOver";
 import HighScores from "./component/HighScores";
 
 function App() {
-  const [level, setLevel] = useState();
+  const [gameStarted, setGameStarted] = useState(false);
   const [pointCount, setPointCount] = useState(0);
   const [gameOver, setGameOver] = useState();
-  let showBubbles = document.querySelectorAll(".bubble");
 
   return (
     <div id="mainDiv">
       <HighScores />
-      {!level && !gameOver && (
-        <Welcome level={level} setLevel={setLevel} gameOver={gameOver} />
+      {!gameStarted && !gameOver && (
+        <Welcome
+          gameStarted={gameStarted}
+          setGameStarted={setGameStarted}
+          gameOver={gameOver}
+        />
       )}
-      {level && !gameOver && (
+      {gameStarted && !gameOver && (
         <Game
-          level={level}
-          setLevel={setLevel}
-          showBubbles={showBubbles}
           pointCount={pointCount}
           setPointCount={setPointCount}
           setGameOver={setGameOver}
@@ -32,7 +32,7 @@ function App() {
         <GameOver
           pointCount={pointCount}
           setPointCount={setPointCount}
-          setLevel={setLevel}
+          setGameStarted={setGameStarted}
           setGameOver={setGameOver}
         />
       )}
