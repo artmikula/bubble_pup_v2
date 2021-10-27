@@ -12,6 +12,7 @@ const StartGame = ({
   timeToGo,
   setGameOver,
   levelChanged,
+  setLevel,
 }) => {
   const addBubbles = () => {
     bubbles = [];
@@ -33,7 +34,7 @@ const StartGame = ({
         for (let i = 0; i < bubbleDiv.length; i++) {
           bubbleDiv[i].style.height = "90px";
           bubbleDiv[i].style.width = "90px";
-          bubbleDiv[i].firstChild.style.display = "initial";
+          bubbleDiv[i].firstChild.style.visibility = "visible";
           bubbleDiv[i].firstChild.style.height = "80px";
           bubbleDiv[i].firstChild.style.width = "80px";
         }
@@ -42,7 +43,7 @@ const StartGame = ({
         for (let i = 0; i < bubbleDiv.length; i++) {
           bubbleDiv[i].style.height = "72px";
           bubbleDiv[i].style.width = "72px";
-          bubbleDiv[i].firstChild.style.display = "initial";
+          bubbleDiv[i].firstChild.style.visibility = "visible";
           bubbleDiv[i].firstChild.style.height = "64px";
           bubbleDiv[i].firstChild.style.width = "64px";
         }
@@ -51,7 +52,7 @@ const StartGame = ({
         for (let i = 0; i < bubbleDiv.length; i++) {
           bubbleDiv[i].style.height = "60px";
           bubbleDiv[i].style.width = "60px";
-          bubbleDiv[i].firstChild.style.display = "initial";
+          bubbleDiv[i].firstChild.style.visibility = "visible";
           bubbleDiv[i].firstChild.style.height = "50px";
           bubbleDiv[i].firstChild.style.width = "50px";
         }
@@ -68,6 +69,7 @@ const StartGame = ({
           setTimeToGo={setTimeToGo}
           setGameOver={setGameOver}
           levelChanged={levelChanged}
+          setLevel={setLevel}
         />
       </div>
       <div id="bubbleDiv">{bubbles}</div>

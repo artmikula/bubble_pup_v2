@@ -20,7 +20,8 @@ function Game({
   let bubbles = [];
 
   const handlePop = (e) => {
-    e.target.style.display = "none";
+    // e.target.style.display = "none";
+    e.target.style.visibility = "hidden";
     play();
     setBubblesToPop(bubblesToPop - 1);
     setPointCount((pointCount += level)); //points for each click are equal to level number
@@ -54,6 +55,8 @@ function Game({
         bubbles={bubbles}
         showBubbles={showBubbles}
         setGameOver={setGameOver}
+        levelChanged={levelChanged}
+        setLevelChanged={setLevelChanged}
       />
     </div>
   );

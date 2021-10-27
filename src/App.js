@@ -14,7 +14,7 @@ function App() {
   return (
     <div id="mainDiv">
       <HighScores />
-      {!level && (
+      {!level && !gameOver && (
         <Welcome level={level} setLevel={setLevel} gameOver={gameOver} />
       )}
       {level && !gameOver && (
@@ -28,7 +28,14 @@ function App() {
           gameOver={gameOver}
         />
       )}
-      {gameOver && <GameOver pointCount={pointCount} />}
+      {gameOver && (
+        <GameOver
+          pointCount={pointCount}
+          setPointCount={setPointCount}
+          setLevel={setLevel}
+          setGameOver={setGameOver}
+        />
+      )}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-function Timer({ timeToGo, setTimeToGo, setGameOver, levelChanged }) {
+function Timer({ timeToGo, setTimeToGo, setGameOver, levelChanged, setLevel }) {
   if (timeToGo > 0 && !levelChanged) {
     setTimeout(() => setTimeToGo(timeToGo - 1), 1000);
   } else if (levelChanged) {
@@ -6,6 +6,7 @@ function Timer({ timeToGo, setTimeToGo, setGameOver, levelChanged }) {
     // setTimeToGo(10);
   } else {
     setGameOver(true);
+    setLevel(0);
     console.log("GAME OVER");
   }
 

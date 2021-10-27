@@ -95,7 +95,6 @@ h2 {
 #bubbleDiv {
   display: flex;
   flex-wrap: wrap;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -134,3 +133,13 @@ button {
 button {
   margin: 15px;
 }
+/* .Timer {
+  animation: counting 0.4s steps(10) forwards infinite;
+  overflow: hidden;
+  height: 35px;
+}
+@keyframes counting {
+  100% {
+    transform: translate3d(0, -10em, 0);
+  }
+} */
