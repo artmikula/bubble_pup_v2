@@ -143,3 +143,56 @@ button {
     transform: translate3d(0, -10em, 0);
   }
 } */
+
+.level1 {
+  height: 120px;
+  width: 120px;
+}
+
+.level1 div {
+  height: 110px;
+  width: 110px;
+  visibility: visible;
+  background-color: darkorange;
+  clip-path: circle(50%);
+  margin: 5px, auto;
+}
+.level2 {
+  height: 90px;
+  width: 90px;
+}
+
+.level2 div {
+  height: 80px;
+  width: 80px;
+  visibility: visible;
+  background-color: darkorange;
+  clip-path: circle(50%);
+  margin: 5px, auto;
+}
+.level3 {
+  height: 72px;
+  width: 72px;
+}
+
+.level3 div {
+  height: 64px;
+  width: 64px;
+  visibility: visible;
+  background-color: darkorange;
+  clip-path: circle(50%);
+  margin: 5px, auto;
+}
+.level4 {
+  height: 60px;
+  width: 60px;
+}
+
+.level4 div {
+  height: 50px;
+  width: 50px;
+  visibility: visible;
+  background-color: darkorange;
+  clip-path: circle(50%);
+  margin: 5px, auto;
+}

@@ -1,6 +1,6 @@
-function GameOver({ pointCount, setLevel, setGameOver, setPointCount }) {
+function GameOver({ pointCount, setGameStarted, setGameOver, setPointCount }) {
   let startGame = function (e) {
-    setLevel(1);
+    setGameStarted(false);
     setGameOver(null);
     setPointCount(0);
   };
