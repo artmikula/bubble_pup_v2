@@ -11,12 +11,12 @@ function Game({
   setPointCount,
   setGameOver,
 }) {
-  const [timeToGo, setTimeToGo] = useState(10);
+  const [timeToGo, setTimeToGo] = useState(20);
   const boxSize = (level + 2) ** 2;
   const [bubblesToPop, setBubblesToPop] = useState(boxSize);
   const [play] = useSound(popSound);
   const [gameDone, setGameDone] = useState(false);
-  const [levelChanged, setLevelChanged] = useState();
+  const [levelChanged, setLevelChanged] = useState(false);
   let bubbles = [];
 
   const handlePop = (e) => {
@@ -35,7 +35,7 @@ function Game({
     // console.log(bubblesToPop + ":bubbles to pop");
     // setLevelChanged(true);
     // clearTimeout();
-    setTimeToGo(10);
+    // setTimeToGo(10);
   }
 
   return (
