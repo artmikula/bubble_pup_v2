@@ -18,13 +18,7 @@
     "react-scripts": "^4.0.3",
     "use-sound": "^4.0.1",
     "uuid": "^8.3.2",
-<<<<<<< HEAD
-    "web-vitals": "^1.1.2",
-    "webpack": "^4.44.2",
-    "webpack-dev-server": "^3.11.1"
-=======
     "web-vitals": "^1.1.2"
->>>>>>> d535c025ead6c75800ea9bf0314c2b9e8b304232
   },
   "scripts": {
     "predeploy": "npm run build",

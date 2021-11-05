@@ -4,7 +4,7 @@ import popSound from "../asset/popsound.wav";
 import Bubble from "./Bubble";
 import Timer from "./Timer";
 
-const StartGame = ({
+const StartLevel = ({
   setGameOver,
   pointCount,
   setPointCount,
@@ -25,15 +25,7 @@ const StartGame = ({
     return bubbles;
   };
 
-  // const addBubbles = () => {
-  //   bubbles = [];
-  //   for (let i = 0; i < boxSize; i++) {
-  //     bubbles.push(Math.random());
-  //   }
-  // };
-
   const handlePop = (e) => {
-    // e.target.style.display = "none";
     e.target.style.visibility = "hidden";
     play();
     setBubblesToPop(bubblesToPop - 1);
@@ -42,17 +34,10 @@ const StartGame = ({
 
   if (bubblesToPop === 0 && timeToGo > 0) {
     setBubblesToPop((level + 3) ** 2);
-    // console.log(bubblesToPop + ":bubbles to pop");
     setLevelChanged(true);
-    // clearTimeout();
   }
-  // addBubbles();
 
   useEffect(() => {
-    console.log("USE EFFECT: level");
-    // <Timer />;
-    // addBubbles();
-    // setGameDone(false);
     setLevelChanged(false);
     setTimeToGo(10);
   }, [level]);
@@ -66,7 +51,6 @@ const StartGame = ({
       } else {
         setGameOver(true);
         setLevel(0);
-        console.log("GAME OVER");
       }
     }, 1000);
   }, [timeToGo]);
@@ -104,8 +88,22 @@ const StartGame = ({
           ))}
         </div>
       ) : null}
+      {level === 5 ? (
+        <div id="bubbleDiv">
+          {bubblesArr(level).map((bubble, index) => (
+            <Bubble key={index} handlePop={handlePop} style={`level${level}`} />
+          ))}
+        </div>
+      ) : null}
+      {level === 6 ? (
+        <div id="bubbleDiv">
+          {bubblesArr(level).map((bubble, index) => (
+            <Bubble key={index} handlePop={handlePop} style={`level${level}`} />
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 };
 
-export default StartGame;
+export default StartLevel;

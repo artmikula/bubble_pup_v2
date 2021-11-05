@@ -1,11 +1,11 @@
 function Welcome({ setGameStarted }) {
-  let startGame = function (e) {
+  let StartLevel = function (e) {
     setGameStarted(true);
   };
 
   return (
-    <div id="startGame">
-      <button onClick={startGame}>
+    <div id="StartLevel">
+      <button onClick={StartLevel}>
         <h1>START GAME</h1>
       </button>
     </div>

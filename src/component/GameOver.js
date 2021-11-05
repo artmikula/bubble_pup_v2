@@ -1,5 +1,12 @@
-function GameOver({ pointCount, setGameStarted, setGameOver, setPointCount }) {
-  let startGame = function (e) {
+function GameOver({
+  pointCount,
+  setGameStarted,
+  setGameOver,
+  setPointCount,
+  setNickname,
+  writeUserData,
+}) {
+  let StartLevel = function (e) {
     setGameStarted(false);
     setGameOver(null);
     setPointCount(0);
@@ -9,12 +16,21 @@ function GameOver({ pointCount, setGameStarted, setGameOver, setPointCount }) {
     <div id="gameOver">
       <h1>GAME OVER</h1>
       <h1>{pointCount} POINTS</h1>
-      <button onClick={startGame}>
+      <button onClick={StartLevel}>
         <h1>RESTART GAME</h1>
       </button>
-      <button>
+      <br></br>
+      <br></br>
+      <input
+        type="text"
+        name="newNick"
+        id="nickInput"
+        placeholder="YOUR NAME"
+        onChange={(e) => setNickname(e.target.value)}
+      />
+      <br></br>
+      <button onClick={writeUserData}>
         <h1>SAVE SCORE</h1>
-        <input id="nickInput" placeholder="ENTER NICKNAME"></input>
       </button>
     </div>
   );

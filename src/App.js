@@ -4,81 +4,52 @@ import Game from "./component/Game";
 import Welcome from "./component/Welcome";
 import GameOver from "./component/GameOver";
 import HighScores from "./component/HighScores";
-import { database } from "./firebase";
+import db from "./firebase";
+import {
+  collection,
+  getDocs,
+  addDoc,
+  query,
+  orderBy,
+  limit,
+} from "firebase/firestore";
 
 function App() {
   const [gameStarted, setGameStarted] = useState(false);
   const [pointCount, setPointCount] = useState(0);
-  const [gameOver, setGameOver] = useState();
+  const [gameOver, setGameOver] = useState("");
+  const [scores, setScores] = useState([]);
+  const [nickname, setNickname] = useState("");
 
-  const [score, setScore] = useState();
-  const [nickname, setNickname] = useState();
+  useEffect(async () => {
+    const res = await getScores();
+    setScores(res);
+  }, [scores]);
 
-  // const Push = () => {
-  //   database
-  //     .ref("user")
-  //     .set({
-  //       name: name,
-  //       age: age,
-  //     })
-  //     .catch(alert);
-  // };
+  async function writeUserData() {
+    const docRef = await addDoc(collection(db, "scores"), {
+      nickname: nickname,
+      score: pointCount,
+    });
+    console.log("document written with ID: ", docRef.id);
+  }
 
-  // const ref = firebase.firestore().collection("scores");
-  // console.log(ref);
-
-  // useEffect(() => {
-  //   getScores2();
-  // }, []);
-
-  // function getScores() {
-  //   setLoading(true);
-  //   ref.onSnapshot((querySnapshot) => {
-  //     const items = [];
-  //     querySnapshot.forEach((doc) => {
-  //       items.push(doc.data());
-  //     });
-  //     setScores(items);
-  //     setLoading(false);
-  //   });
-  // }
-
-  // function getScores2() {
-  //   setLoading(true);
-  //   ref.get().then((item) => {
-  //     const items = item.docs.map((doc) => doc.data());
-  //     setScores(items);
-  //     setLoading(false);
-  //   });
-  // }
+  async function getScores() {
+    const allScores = collection(db, "scores");
+    const topScores = query(allScores, orderBy("score", "desc"), limit(3));
+    const scoreSnapshot = await getDocs(topScores);
+    const scoreList = scoreSnapshot.docs.map((doc) => doc.data());
+    return scoreList;
+  }
 
   return (
     <div id="mainDiv">
-      {/* <center>
-        <input
-          placeholder="Enter your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br />
-        <br />
-        <input
-          placeholder="Enter your age"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-        />
-        <br />
-        <br />
-        <button onClick={Push}>PUSH</button>
-      </center> */}
-      {/* <h1>Scores</h1>
-      {scores.map((score) => (
-        <div key={score.id}>
-          <h2>{score.nickname}</h2>
-        </div>
-      ))} */}
-      {test}
-      <HighScores />
+      <HighScores
+        scores={scores}
+        setNickname={setNickname}
+        nickname={nickname}
+        writeUserData={writeUserData}
+      />
       {!gameStarted && !gameOver && (
         <Welcome
           gameStarted={gameStarted}
@@ -100,6 +71,8 @@ function App() {
           setPointCount={setPointCount}
           setGameStarted={setGameStarted}
           setGameOver={setGameOver}
+          setNickname={setNickname}
+          writeUserData={writeUserData}
         />
       )}
     </div>
