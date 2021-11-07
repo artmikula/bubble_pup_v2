@@ -44,12 +44,6 @@ function App() {
 
   return (
     <div id="mainDiv">
-      <HighScores
-        scores={scores}
-        setNickname={setNickname}
-        nickname={nickname}
-        writeUserData={writeUserData}
-      />
       {!gameStarted && !gameOver && (
         <Welcome
           gameStarted={gameStarted}
@@ -75,6 +69,12 @@ function App() {
           writeUserData={writeUserData}
         />
       )}
+      <HighScores
+        scores={scores}
+        setNickname={setNickname}
+        nickname={nickname}
+        writeUserData={writeUserData}
+      />
     </div>
   );
 }
