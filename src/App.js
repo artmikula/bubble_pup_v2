@@ -69,12 +69,12 @@ function App() {
           writeUserData={writeUserData}
         />
       )}
-      <HighScores
+      {/* <HighScores
         scores={scores}
         setNickname={setNickname}
         nickname={nickname}
         writeUserData={writeUserData}
-      />
+      /> */}
     </div>
   );
 }
