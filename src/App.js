@@ -60,21 +60,23 @@ function App() {
         />
       )}
       {gameOver && (
-        <GameOver
-          pointCount={pointCount}
-          setPointCount={setPointCount}
-          setGameStarted={setGameStarted}
-          setGameOver={setGameOver}
-          setNickname={setNickname}
-          writeUserData={writeUserData}
-        />
+        <div>
+          <GameOver
+            pointCount={pointCount}
+            setPointCount={setPointCount}
+            setGameStarted={setGameStarted}
+            setGameOver={setGameOver}
+            setNickname={setNickname}
+            writeUserData={writeUserData}
+          />
+          <HighScores
+            scores={scores}
+            setNickname={setNickname}
+            nickname={nickname}
+            writeUserData={writeUserData}
+          />
+        </div>
       )}
-      {/* <HighScores
-        scores={scores}
-        setNickname={setNickname}
-        nickname={nickname}
-        writeUserData={writeUserData}
-      /> */}
     </div>
   );
 }

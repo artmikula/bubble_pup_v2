@@ -58,6 +58,7 @@
   background-color: darkorange;
   clip-path: circle(50%);
   margin: 5px, auto;
+  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
 }
 
 #bubbleDiv {
@@ -213,4 +214,8 @@ button {
   background-color: darkorange;
   clip-path: circle(50%);
   margin: 5px, auto;
+}
+
+.bubble {
+  background: radial-gradient(circle at 100px 100px, #5cabff, #000);
 }
