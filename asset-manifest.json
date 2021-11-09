@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/bubble_pup_v2/static/css/main.cd33d691.chunk.css",
-    "main.js": "/bubble_pup_v2/static/js/main.b83d0b6e.chunk.js",
-    "main.js.map": "/bubble_pup_v2/static/js/main.b83d0b6e.chunk.js.map",
-    "runtime-main.js": "/bubble_pup_v2/static/js/runtime-main.86980433.js",
-    "runtime-main.js.map": "/bubble_pup_v2/static/js/runtime-main.86980433.js.map",
-    "static/js/2.4766c680.chunk.js": "/bubble_pup_v2/static/js/2.4766c680.chunk.js",
-    "static/js/2.4766c680.chunk.js.map": "/bubble_pup_v2/static/js/2.4766c680.chunk.js.map",
-    "static/js/3.6768d376.chunk.js": "/bubble_pup_v2/static/js/3.6768d376.chunk.js",
-    "static/js/3.6768d376.chunk.js.map": "/bubble_pup_v2/static/js/3.6768d376.chunk.js.map",
-    "static/js/4.2d4a1d64.chunk.js": "/bubble_pup_v2/static/js/4.2d4a1d64.chunk.js",
-    "static/js/4.2d4a1d64.chunk.js.map": "/bubble_pup_v2/static/js/4.2d4a1d64.chunk.js.map",
-    "index.html": "/bubble_pup_v2/index.html",
-    "static/css/main.cd33d691.chunk.css.map": "/bubble_pup_v2/static/css/main.cd33d691.chunk.css.map",
-    "static/js/2.4766c680.chunk.js.LICENSE.txt": "/bubble_pup_v2/static/js/2.4766c680.chunk.js.LICENSE.txt",
-    "static/js/3.6768d376.chunk.js.LICENSE.txt": "/bubble_pup_v2/static/js/3.6768d376.chunk.js.LICENSE.txt",
-    "static/media/popsound.835455a8.wav": "/bubble_pup_v2/static/media/popsound.835455a8.wav"
+    "main.css": "/artmikula/bubble_pup_v2.git/static/css/main.cd33d691.chunk.css",
+    "main.js": "/artmikula/bubble_pup_v2.git/static/js/main.b83d0b6e.chunk.js",
+    "main.js.map": "/artmikula/bubble_pup_v2.git/static/js/main.b83d0b6e.chunk.js.map",
+    "runtime-main.js": "/artmikula/bubble_pup_v2.git/static/js/runtime-main.82706efa.js",
+    "runtime-main.js.map": "/artmikula/bubble_pup_v2.git/static/js/runtime-main.82706efa.js.map",
+    "static/js/2.89e6c101.chunk.js": "/artmikula/bubble_pup_v2.git/static/js/2.89e6c101.chunk.js",
+    "static/js/2.89e6c101.chunk.js.map": "/artmikula/bubble_pup_v2.git/static/js/2.89e6c101.chunk.js.map",
+    "static/js/3.6768d376.chunk.js": "/artmikula/bubble_pup_v2.git/static/js/3.6768d376.chunk.js",
+    "static/js/3.6768d376.chunk.js.map": "/artmikula/bubble_pup_v2.git/static/js/3.6768d376.chunk.js.map",
+    "static/js/4.2d4a1d64.chunk.js": "/artmikula/bubble_pup_v2.git/static/js/4.2d4a1d64.chunk.js",
+    "static/js/4.2d4a1d64.chunk.js.map": "/artmikula/bubble_pup_v2.git/static/js/4.2d4a1d64.chunk.js.map",
+    "index.html": "/artmikula/bubble_pup_v2.git/index.html",
+    "static/css/main.cd33d691.chunk.css.map": "/artmikula/bubble_pup_v2.git/static/css/main.cd33d691.chunk.css.map",
+    "static/js/2.89e6c101.chunk.js.LICENSE.txt": "/artmikula/bubble_pup_v2.git/static/js/2.89e6c101.chunk.js.LICENSE.txt",
+    "static/js/3.6768d376.chunk.js.LICENSE.txt": "/artmikula/bubble_pup_v2.git/static/js/3.6768d376.chunk.js.LICENSE.txt",
+    "static/media/popsound.835455a8.wav": "/artmikula/bubble_pup_v2.git/static/media/popsound.835455a8.wav"
   },
   "entrypoints": [
-    "static/js/runtime-main.86980433.js",
-    "static/js/2.4766c680.chunk.js",
+    "static/js/runtime-main.82706efa.js",
+    "static/js/2.89e6c101.chunk.js",
     "static/css/main.cd33d691.chunk.css",
     "static/js/main.b83d0b6e.chunk.js"
   ]
